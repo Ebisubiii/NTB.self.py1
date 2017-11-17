@@ -13,7 +13,7 @@ print "===[Login Success]==="
 
 
 helpMessage ="""
-====={List Keyword]=====
+====={Your Self}=====
 ► Help
 ► Creator
 ► Gcreator
@@ -51,10 +51,12 @@ helpMessage ="""
 ► Unban @
 ► Banlist
 ► Kill ban
+
+ {Nightmare Team Bot}
 """
 
 mid = cl.getProfile().mid
-Creator="ud8c4d53f17999c8e029827b67af3b06a"
+Creator="uc77fd25b59f6e563d84f1334f3fed10b"
 admin=[""]
 
 contact = cl.getProfile()
