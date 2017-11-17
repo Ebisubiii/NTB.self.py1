@@ -531,7 +531,7 @@ def bot(op):
 		gid = cl.getGroupIdsJoined()
 		for i in gid:
 		    cl.sendText(i,"=======[BROADCAST]=======\n\n"+bc+"\n\nContact Gua : line.me/ti/p/~@enr7503k")
-		cl.sendText(msg.to,"Success BC BosQ")
+		cl.sendText(msg.to,"DONE")
 #--------------------------------------------------------
             elif msg.text in ["Cancelall"]:
                 gid = cl.getGroupIdsInvited()
