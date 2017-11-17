@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#Cat_Bot
+#Nightmare
 
 import LINETCR
 from LINETCR.lib.curve.ttypes import *
@@ -81,7 +81,7 @@ helpMessage ="""
 ►Auto join:on / off
 ►All join / (Cb1/2/3 join)
 
-By : Cat_Bot
+{NIGHTMARE BOT}
 """
 
 KAC=[cl,ki,kk,kc]
@@ -90,7 +90,7 @@ Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
 Bots=[mid,Amid,Bmid,Cmid]
-Creator="ud8c4d53f17999c8e029827b67af3b06a"
+Creator="uc77fd25b59f6e563d84f1334f3fed10b"
 admin=["Your MID here!"]
 
 wait = {
