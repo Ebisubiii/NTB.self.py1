@@ -40,7 +40,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 helpMessage ="""
-========[Cat_Bot]========
+========[NTB COMMAND]========
 
 [Command In Group]
 ►Creator
@@ -668,7 +668,7 @@ def bot(op):
                     for i in gid:
                         h = cl.getGroup(i).name
 		        if h == ng:
-			    cl.sendText(i,"Bot di paksa keluar oleh owner!")
+			    cl.sendText(i,"Bye Bye")
 		            cl.leaveGroup(i)
 			    ki.leaveGroup(i)
 			    kk.leaveGroup(i)
@@ -963,8 +963,8 @@ def bot(op):
 		gid = cl.getGroupIdsJoined()
 		if msg.from_ in admin:
 		    for i in gid:
-			cl.sendText(i,"=======[BROADCAST]=======\n\n"+bc+"\n\nContact Me : line.me/ti/p/~@xpk5386g")
-		    cl.sendText(msg.to,"Success BC BosQ")
+			cl.sendText(i,"=======[BROADCAST]=======\n\n"+bc+"\n\nContact Me : line.me/ti/p/~@enr7503k")
+		    cl.sendText(msg.to,"Done BC")
 		else:
 		    cl.sendText(msg.to,"Khusus Admin")
 #--------------------------------------------------------
@@ -1071,7 +1071,7 @@ def bot(op):
 		    cl.sendText(msg.to,"Sape lu!")
 
 #--------------------------------------------------------
-	    elif msg.text in ["Cb Like"]:
+	    elif msg.text in ["NTB Like"]:
 		try:
 		    print "activity"
 		    url = cl.activity(limit=1)
@@ -1080,11 +1080,11 @@ def bot(op):
 		    ki.like(url['result']['posts'][0]['userInfo']['mid'], url['result']['posts'][0]['postInfo']['postId'], likeType=1001)
 		    kk.like(url['result']['posts'][0]['userInfo']['mid'], url['result']['posts'][0]['postInfo']['postId'], likeType=1001)
 		    kc.like(url['result']['posts'][0]['userInfo']['mid'], url['result']['posts'][0]['postInfo']['postId'], likeType=1001)
-		    cl.comment(url['result']['posts'][0]['userInfo']['mid'], url['result']['posts'][0]['postInfo']['postId'], "Mau Bot Protect?\nFollow ig : @rid1bdbx\nLalu dm ke dia")
-		    ki.comment(url['result']['posts'][0]['userInfo']['mid'], url['result']['posts'][0]['postInfo']['postId'], "Mau Bot Protect?\nFollow ig : @rid1bdbx\nLalu dm ke dia")
-		    kk.comment(url['result']['posts'][0]['userInfo']['mid'], url['result']['posts'][0]['postInfo']['postId'], "Mau Bot Protect?\nFollow ig : @rid1bdbx\nLalu dm ke dia")
-		    kc.comment(url['result']['posts'][0]['userInfo']['mid'], url['result']['posts'][0]['postInfo']['postId'], "Mau Bot Protect?\nFollow ig : @rid1bdbx\nLalu dm ke dia")
-		    cl.sendText(msg.to, "Success~")
+		    cl.comment(url['result']['posts'][0]['userInfo']['mid'], url['result']['posts'][0]['postInfo']['postId'], "Contact Creator line.me/ti/p/~@enr7503k")
+		    ki.comment(url['result']['posts'][0]['userInfo']['mid'], url['result']['posts'][0]['postInfo']['postId'], "Contact Creator line.me/ti/p/~@enr7503k")
+		    kk.comment(url['result']['posts'][0]['userInfo']['mid'], url['result']['posts'][0]['postInfo']['postId'], "Contact Creator line.me/ti/p/~@enr7503k")
+		    kc.comment(url['result']['posts'][0]['userInfo']['mid'], url['result']['posts'][0]['postInfo']['postId'], "Contact Creator line.me/ti/p/~@enr7503k")
+		    cl.sendText(msg.to, "Done")
 		except Exception as E:
 		    try:
 			cl.sendText(msg.to,str(E))
@@ -1115,9 +1115,9 @@ def bot(op):
 #--------------------------------------------------------
             elif msg.text in ["Absen"]:
 		cl.sendText(msg.to,"Pasukan absen!!")
-                ki.sendText(msg.to,"Cb1 Hadiir  \(ˆ▿ˆ)/")
-                kk.sendText(msg.to,"Cb2 Hadiir  \(ˆ▿ˆ)/")
-                kc.sendText(msg.to,"Cb3 Hadiir  \(ˆ▿ˆ)/")
+                ki.sendText(msg.to,"NTB HADIR KAWAN")
+                kk.sendText(msg.to,"NTB HADIR KAWAN")
+                kc.sendText(msg.to,"NTB HADIR KAWAN")
 
 #--------------------------------------------------------
             elif msg.text in ["Sp","Speed","speed"]:
