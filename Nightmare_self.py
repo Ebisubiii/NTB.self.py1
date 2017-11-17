@@ -14,7 +14,7 @@ print "===[Login Success]==="
 
 helpMessage ="""
 ====={Your Self}=====
-► Help
+► List
 ► Creator
 ► Gcreator
 ► List group:
@@ -168,7 +168,7 @@ def bot(op):
 		if op.param2 in admin:
 		    pass
 		else:
-                    cl.sendText(msg.to, "Jangan mainan QR ntr ada kicker")
+                    cl.sendText(msg.to, "Jangan main QR Nanti Kicker masuk")
             else:
                 pass
 #--------------------------SEND_MESSAGE---------------------------
@@ -252,7 +252,7 @@ def bot(op):
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': Creator}
                 cl.sendMessage(msg)
-		cl.sendText(msg.to,"Itu Yang Bikin BOT")
+		cl.sendText(msg.to,"Itu kontak yang buat bot")
 #--------------------------------------------------------
 	    elif msg.text in ["Group creator","Gcreator","gcreator"]:
 		ginfo = cl.getGroup(msg.to)
@@ -260,7 +260,7 @@ def bot(op):
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': gCreator}
                 cl.sendMessage(msg)
-		cl.sendText(msg.to,"Itu Yang Buat Grup Ini")
+		cl.sendText(msg.to,"Itu kontak yang buat group")
 #--------------------------------------------------------
             elif msg.contentType == 16:
                 if wait["Timeline"] == True:
@@ -279,7 +279,7 @@ def bot(op):
 		    gn = cl.getGroup(i).name
                     h += "♦【%s】\n" % (gn)
 		    jml += 1
-                cl.sendText(msg.to,"======[List Group]======\n"+ h +"Total group: "+str(jml))
+                cl.sendText(msg.to,"======[My GROUP]======\n"+ h +"Total group: "+str(jml))
 #--------------------------------------------------------
 	    elif "Leave group: " in msg.text:
 		ng = msg.text.replace("Leave group: ","")
@@ -310,7 +310,7 @@ def bot(op):
                     X = cl.getGroup(msg.to)
                     X.preventJoinByTicket = False
                     cl.updateGroup(X)
-                    cl.sendText(msg.to,"Url Active")
+                    cl.sendText(msg.to,"Url Aktif")
                 else:
                     cl.sendText(msg.to,"Can not be used outside the group")
 #--------------------------------------------------------
@@ -319,18 +319,18 @@ def bot(op):
                     X = cl.getGroup(msg.to)
                     X.preventJoinByTicket = True
                     cl.updateGroup(X)
-                    cl.sendText(msg.to,"Url inActive")
+                    cl.sendText(msg.to,"Url Non-aktif")
 
                 else:
                     cl.sendText(msg.to,"Can not be used outside the group")
 #--------------------------------------------------------
             elif msg.text in ["Join on","Autojoin:on"]:
                 wait["AutoJoin"] = True
-                cl.sendText(msg.to,"AutoJoin Active")
+                cl.sendText(msg.to,"Auto Aktif")
 
             elif msg.text in ["Join off","Autojoin:off"]:
                 wait["AutoJoin"] = False
-                cl.sendText(msg.to,"AutoJoin inActive")
+                cl.sendText(msg.to,"Auto Non-aktif")
 
 #--------------------------------------------------------
 	    elif msg.text in ["Autocancel:on"]:
@@ -345,19 +345,19 @@ def bot(op):
 #--------------------------------------------------------
 	    elif "Qr:on" in msg.text:
 	        wait["Qr"] = True
-	    	cl.sendText(msg.to,"QR Protect Active")
+	    	cl.sendText(msg.to,"Protect Qr On")
 
 	    elif "Qr:off" in msg.text:
 	    	wait["Qr"] = False
-	    	cl.sendText(msg.to,"Qr Protect inActive")
+	    	cl.sendText(msg.to,"Protect Qr Off")
 #--------------------------------------------------------
 	    elif "Autokick:on" in msg.text:
 		wait["AutoKick"] = True
-		cl.sendText(msg.to,"AutoKick Active")
+		cl.sendText(msg.to,"Auto Aktif")
 
 	    elif "Autokick:off" in msg.text:
 		wait["AutoKick"] = False
-		cl.sendText(msg.to,"AutoKick inActive")
+		cl.sendText(msg.to,"Auto Non-aktif")
 #--------------------------------------------------------
             elif msg.text in ["K on","Contact:on"]:
                 wait["Contact"] = True
@@ -367,7 +367,7 @@ def bot(op):
                 wait["Contact"] = False
                 cl.sendText(msg.to,"Contact inActive")
 #--------------------------------------------------------
-            elif msg.text in ["Status"]:
+            elif msg.text in ["List"]:
                 md = ""
 		if wait["AutoJoin"] == True: md+="✦ Auto join : on\n"
                 else: md +="✦ Auto join : off\n"
@@ -530,7 +530,7 @@ def bot(op):
 		bc = msg.text.replace("Bc: ","")
 		gid = cl.getGroupIdsJoined()
 		for i in gid:
-		    cl.sendText(i,"=======[BROADCAST]=======\n\n"+bc+"\n\nContact Me : line.me/ti/p/~@xpk5386g")
+		    cl.sendText(i,"=======[BROADCAST]=======\n\n"+bc+"\n\nContact Gua : line.me/ti/p/~@enr7503k")
 		cl.sendText(msg.to,"Success BC BosQ")
 #--------------------------------------------------------
             elif msg.text in ["Cancelall"]:
@@ -572,7 +572,7 @@ def bot(op):
                 start = time.time()
 		print("Speed")
                 elapsed_time = time.time() - start
-		cl.sendText(msg.to, "Progress...")
+		cl.sendText(msg.to, "Tunggu Sebentar")
                 cl.sendText(msg.to, "%sseconds" % (elapsed_time))
 
 #--------------------------------------------------------
