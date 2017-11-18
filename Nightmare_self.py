@@ -13,7 +13,7 @@ print "===[Login Success]==="
 
 
 helpMessage ="""
-====={Your Self}=====
+=====[ᴄᴏᴍᴍᴀɴᴅ ғᴏʀ ᴀᴅᴍɪɴ]=====
 ► List
 ► Creator
 ► Gcreator
@@ -51,7 +51,8 @@ helpMessage ="""
 ► Unban @
 ► Banlist
 ► Kill ban
-
+► Tag All
+► Say [Text]
  {Nightmare Team Bot}
 """
 
@@ -415,20 +416,30 @@ def bot(op):
                 cl.sendMessage(msg)
 
 #--------------------------------------------------------
-	    elif "Tagall" == msg.text:
-		group = cl.getGroup(msg.to)
-		mem = [contact.mid for contact in group.members]
-		for mm in mem:
-		    xname = cl.getContact(mm).displayName
-		    xlen = str(len(xname)+1)
-		    msg.contentType = 0
-		    msg.text = "@"+xname+" "
-		    msg.contentMetadata = {'MENTION':'{"MENTIONEES":[{"S":"0","E":'+json.dumps(xlen)+',"M":'+json.dumps(mm)+'}]}','EMTVER':'4'}
-		    try:
-		        cl.sendMessage(msg)
-		    except Exception as e:
-			print str(e)
-
+	    elif "Tagall" in msg.text:
+                group = cl.getGroup(msg.to)
+                k = len(group.members)//100
+                for j in xrange(k+1):
+                    msg = Message(to=msg.to)
+                    txt = u''
+                    s=0
+                    d=[]
+                    for i in group.members[j*100 : (j+1)*100]:
+                        d.append({"S":str(s), "E" :str(s+8), "M":i.mid})
+                        s += 9
+                        txt += u'@Krampus\n'
+                    msg.text = txt
+                    msg.contentMetadata = {u'MENTION':json.dumps({"MENTIONEES":d})}
+                    cl.sendMessage(msg) 
+#--------------------------Say Text------------------------------
+             elif "Say " in msg.text:
+                string = msg.text.replace("Say ","")
+                if len(string.decode('utf-8')) <= 50:
+                    ki.sendText(msg.to," " + string + " ")
+                    kk.sendText(msg.to," " + string + " ")
+                    ks.sendText(msg.to," " + string + " ")
+                    kc.sendText(msg.to," " + string + " ")
+                    ka.sendText(msg.to," " + string + " ")
 #--------------------------CEK SIDER------------------------------
 
             elif "Setview" in msg.text:
@@ -559,7 +570,7 @@ def bot(op):
 		    url = cl.activity(limit=1)
 		    print url
 		    cl.like(url['result']['posts'][0]['userInfo']['mid'], url['result']['posts'][0]['postInfo']['postId'], likeType=1001)
-		    cl.comment(url['result']['posts'][0]['userInfo']['mid'], url['result']['posts'][0]['postInfo']['postId'], "Mau Bot Protect?\nFollow ig : @rid1bdbx\nLalu dm ke dia")
+		    cl.comment(url['result']['posts'][0]['userInfo']['mid'], url['result']['posts'][0]['postInfo']['postId'], "Contact Gua line.me/ti/p/~@enr7503k")
 		    cl.sendText(msg.to, "Success~")
 		except Exception as E:
 		    try:
