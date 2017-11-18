@@ -52,7 +52,6 @@ helpMessage ="""
 ► Banlist
 ► Kill ban
 ► Tag All
-► Say [Text]
  {Nightmare Team Bot}
 """
 
@@ -416,7 +415,7 @@ def bot(op):
                 cl.sendMessage(msg)
 
 #--------------------------------------------------------
-	    elif "Tagall" in msg.text:
+	    elif "Kam" in msg.text:
                 group = cl.getGroup(msg.to)
                 k = len(group.members)//100
                 for j in xrange(k+1):
