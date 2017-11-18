@@ -431,15 +431,6 @@ def bot(op):
                     msg.text = txt
                     msg.contentMetadata = {u'MENTION':json.dumps({"MENTIONEES":d})}
                     cl.sendMessage(msg) 
-#--------------------------Say Text------------------------------
-             elif "Say " in msg.text:
-                string = msg.text.replace("Say ","")
-                if len(string.decode('utf-8')) <= 50:
-                    ki.sendText(msg.to," " + string + " ")
-                    kk.sendText(msg.to," " + string + " ")
-                    ks.sendText(msg.to," " + string + " ")
-                    kc.sendText(msg.to," " + string + " ")
-                    ka.sendText(msg.to," " + string + " ")
 #--------------------------CEK SIDER------------------------------
 
             elif "Setview" in msg.text:
